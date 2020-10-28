@@ -17,8 +17,8 @@ import java.util.Optional;
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class AdminController {
 
-    static final String BASE_PATH = "/admin";
-    static final String IMPORT_CHARACTER = "/import/character/{id}";
+    public static final String BASE_PATH = "/admin";
+    public static final String IMPORT_CHARACTER = "/import/character/{id}";
 
     private final AdminService adminService;
 

@@ -18,9 +18,9 @@ import java.util.Optional;
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class PublicController {
 
-    static final String BASE_PATH = "/api";
-    static final String BY_ID = "/character/{id}";
-    static final String BY_NAME = "/search/{name}";
+    public static final String BASE_PATH = "/api";
+    public static final String BY_ID = "/character/{id}";
+    public static final String BY_NAME = "/search/{name}";
 
     private final PublicService publicService;
 
