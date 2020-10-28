@@ -24,7 +24,7 @@ class AdminControllerMappingTest {
         int inputId = 42;
 
         //when
-        mockMvc.perform(post("/admin/import/character/{id}", inputId));
+        mockMvc.perform(post("/admin/import/character/42"));
 
         //then
         verify(tested, times(1)).importPerson(inputId);

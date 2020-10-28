@@ -18,11 +18,11 @@ import java.util.Optional;
 public class AdminController {
 
     static final String BASE_PATH = "/admin";
-    static final String CHARACTER = "/import/character/{id}";
+    static final String IMPORT_CHARACTER = "/import/character/{id}";
 
     private final AdminService adminService;
 
-    @PostMapping(value = CHARACTER)
+    @PostMapping(value = IMPORT_CHARACTER)
     public ResponseEntity importPerson(@PathVariable("id") Integer id) {
         Optional<Person> person = adminService.importPerson(id);
         if (person.isPresent()) {
