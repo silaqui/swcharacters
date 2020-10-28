@@ -1,2 +1,4 @@
-sw:
-  maxmass: 50
+search:
+  maxmass: 500
+urls:
+  people: http://swapi.dev/api/people/{id}

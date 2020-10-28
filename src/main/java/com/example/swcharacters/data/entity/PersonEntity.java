@@ -24,4 +24,12 @@ public class PersonEntity {
         return new Person(name, height, mass);
     }
 
+    public static PersonEntity fromPerson(int id, Person p) {
+        return new PersonEntity(
+                id,
+                p.getName(),
+                p.getHeight(),
+                p.getMass());
+    }
+
 }

@@ -1,5 +1,8 @@
 package com.example.swcharacters.service;
 
+import com.example.swcharacters.data.StarWarsRepository;
+import com.example.swcharacters.data.entity.PersonEntity;
+import com.example.swcharacters.datasource.model.SWApiDataSource;
 import com.example.swcharacters.model.Person;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +14,13 @@ import java.util.Optional;
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class AdminService {
 
+    private final StarWarsRepository repository;
+    private final SWApiDataSource api;
+
     public Optional<Person> importPerson(int id) {
-        return Optional.empty();
+        Optional<Person> person = api.importPerson(id);
+        person.ifPresent(value -> repository.save(PersonEntity.fromPerson(id, value)));
+        return person;
     }
 
 }

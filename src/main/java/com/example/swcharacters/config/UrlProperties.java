@@ -5,11 +5,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(prefix = "search")
+@ConfigurationProperties(prefix = "urls")
 @Data
-public class SearchProperties {
+public class UrlProperties {
 
-    private double maxHeight = -1;
-    private double maxMass = -1;
+    private String people;
 
 }
