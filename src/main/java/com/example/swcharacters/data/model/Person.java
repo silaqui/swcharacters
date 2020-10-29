@@ -1,4 +1,4 @@
-package com.example.swcharacters.model;
+package com.example.swcharacters.data.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

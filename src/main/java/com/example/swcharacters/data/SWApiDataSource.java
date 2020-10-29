@@ -1,7 +1,7 @@
 package com.example.swcharacters.data;
 
 import com.example.swcharacters.config.UrlProperties;
-import com.example.swcharacters.model.Person;
+import com.example.swcharacters.data.model.Person;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

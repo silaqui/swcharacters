@@ -2,7 +2,7 @@ package com.example.swcharacters.service;
 
 import com.example.swcharacters.data.StarWarsRepository;
 import com.example.swcharacters.data.entity.PersonEntity;
-import com.example.swcharacters.model.Person;
+import com.example.swcharacters.data.model.Person;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

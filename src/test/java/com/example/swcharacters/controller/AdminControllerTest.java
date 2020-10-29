@@ -1,6 +1,6 @@
 package com.example.swcharacters.controller;
 
-import com.example.swcharacters.model.Person;
+import com.example.swcharacters.data.model.Person;
 import com.example.swcharacters.service.AdminService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

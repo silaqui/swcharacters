@@ -1,7 +1,7 @@
 package com.example.swcharacters.data;
 
 import com.example.swcharacters.config.UrlProperties;
-import com.example.swcharacters.model.Person;
+import com.example.swcharacters.data.model.Person;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

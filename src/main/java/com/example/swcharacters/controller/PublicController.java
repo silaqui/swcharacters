@@ -1,6 +1,6 @@
 package com.example.swcharacters.controller;
 
-import com.example.swcharacters.model.Person;
+import com.example.swcharacters.data.model.Person;
 import com.example.swcharacters.service.PublicService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;

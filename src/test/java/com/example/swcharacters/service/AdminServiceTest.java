@@ -3,7 +3,7 @@ package com.example.swcharacters.service;
 import com.example.swcharacters.data.SWApiDataSource;
 import com.example.swcharacters.data.StarWarsRepository;
 import com.example.swcharacters.data.entity.PersonEntity;
-import com.example.swcharacters.model.Person;
+import com.example.swcharacters.data.model.Person;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

@@ -1,6 +1,6 @@
 package com.example.swcharacters.data.entity;
 
-import com.example.swcharacters.model.Person;
+import com.example.swcharacters.data.model.Person;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
