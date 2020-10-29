@@ -1,4 +1,4 @@
-package com.example.swcharacters.datasource.model;
+package com.example.swcharacters.data;
 
 import com.example.swcharacters.config.UrlProperties;
 import com.example.swcharacters.model.Person;
