@@ -40,7 +40,7 @@ class AdminControllerTest {
         //then
         verify(adminService, times(1)).importPerson(inputId);
         verifyNoMoreInteractions(adminService);
-        assertThat(actual.getStatusCode()).isEqualTo(HttpStatus.NO_CONTENT);
+        assertThat(actual.getStatusCode()).isEqualTo(HttpStatus.OK);
     }
 
     @Test

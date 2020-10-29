@@ -2,6 +2,9 @@ package com.example.swcharacters.controller;
 
 import com.example.swcharacters.model.Person;
 import com.example.swcharacters.service.PublicService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +28,12 @@ public class PublicController {
     private final PublicService publicService;
 
     @GetMapping(value = BY_ID)
+    @ApiOperation(value = "Import character by ID",
+            notes = "Get character from SWApi and save it in local database"
+    )
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Ok"),
+            @ApiResponse(code = 404, message = "Character not found")})
     public ResponseEntity<Person> getCharacter(@PathVariable("id") int id) {
         Optional<Person> person = publicService.getById(id);
         if (person.isPresent()) {
@@ -35,6 +44,11 @@ public class PublicController {
     }
 
     @GetMapping(value = BY_NAME)
+    @ApiOperation(value = "Import character by ID",
+            notes = "Get character from SWApi and save it in local database"
+    )
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Ok - Return list for matches, can be empty")})
     public ResponseEntity<List<Person>> search(@PathVariable("name") String name) {
         List<Person> list = publicService.getByName(name);
         return ResponseEntity.of(Optional.of(list));
