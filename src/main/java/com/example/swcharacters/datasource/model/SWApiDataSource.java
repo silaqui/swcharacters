@@ -19,15 +19,15 @@ public class SWApiDataSource {
     private final UrlProperties urls;
 
     public Optional<Person> importPerson(int id) {
+        Person person = null;
         try {
-            Person forObject = rest.getForObject(urls.getPeople(), Person.class, id);
-            return Optional.ofNullable(forObject);
+            person = rest.getForObject(urls.getPeople(), Person.class, id);
         } catch (final HttpClientErrorException e) {
-            if (e.getStatusCode().equals(HttpStatus.NOT_FOUND)) {
-                return Optional.empty();
+            if (!e.getStatusCode().equals(HttpStatus.NOT_FOUND)) {
+                throw e;
             }
-            throw e;
         }
+        return Optional.ofNullable(person);
     }
 
 }
